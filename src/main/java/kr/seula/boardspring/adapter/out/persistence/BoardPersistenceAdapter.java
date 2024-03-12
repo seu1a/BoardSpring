@@ -1,6 +1,6 @@
 package kr.seula.boardspring.adapter.out.persistence;
 
-import kr.seula.boardspring.port.out.BoardPersistencePort;
+import kr.seula.boardspring.port.out.CreateBoardUseCase;
 
-public class BoardPersistenceAdapter extends BoardPersistencePort {
+public class BoardPersistenceAdapter extends CreateBoardUseCase {
 }

@@ -1,4 +1,4 @@
 package kr.seula.boardspring.port.out;
 
-public class BoardPersistencePort {
+public class CreateBoardUseCase {
 }
