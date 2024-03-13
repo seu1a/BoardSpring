@@ -1,4 +1,4 @@
-package kr.seula.boardspring.adapter.out.persistence.entity;
+package kr.seula.boardspring.domain.board.adapter.out.persistence.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package kr.seula.boardspring.adapter.in.web;
+package kr.seula.boardspring.domain.board.adapter.in.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
