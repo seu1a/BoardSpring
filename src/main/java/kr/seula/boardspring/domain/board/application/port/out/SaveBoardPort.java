@@ -1,6 +1,6 @@
 package kr.seula.boardspring.domain.board.application.port.out;
 
-public interface CreateBoardPort {
+public interface SaveBoardPort {
 
 
 
