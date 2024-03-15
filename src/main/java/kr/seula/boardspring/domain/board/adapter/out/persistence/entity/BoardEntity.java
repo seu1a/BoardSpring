@@ -2,10 +2,13 @@ package kr.seula.boardspring.domain.board.adapter.out.persistence.entity;
 
 import jakarta.persistence.*;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
+@Data
 @Entity
+@SuperBuilder
 @NoArgsConstructor
 public class BoardEntity {
 
@@ -18,16 +21,5 @@ public class BoardEntity {
 
     @Column(nullable = false)
     private String description;
-
-    @Builder
-    public BoardEntity(
-            Long id,
-            String title,
-            String description
-    ) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-    }
 
 }
