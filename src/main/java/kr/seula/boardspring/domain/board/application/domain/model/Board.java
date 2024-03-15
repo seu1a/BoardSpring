@@ -17,12 +17,11 @@ public class Board {
 
     private BoardDescription description;
 
-    public Board createBoard(CreateBoardDTO boardDTO) {
-        return new Board(
-                null,
-                 new BoardTitle(boardDTO.getTitle()),
-                new BoardDescription(boardDTO.getDescription())
-        );
+    public static Board createBoard(CreateBoardDTO boardDTO) {
+        return Board.builder()
+                .id(null)
+                .title(new BoardTitle(boardDTO.getTitle()))
+                .description(new BoardDescription(boardDTO.getDescription()))
+                .build();
     }
-
 }
