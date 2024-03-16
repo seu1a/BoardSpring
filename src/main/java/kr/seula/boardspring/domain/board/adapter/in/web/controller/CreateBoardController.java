@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("board")
 @RequiredArgsConstructor
-public class BoardController {
+public class CreateBoardController {
     private final CreateBoardUseCase createBoardUseCase;
 
-    @PostMapping("/create")
-    public String createBoard(
-            @RequestBody CreateBoardDTO createBoardDTO){
+    @PostMapping("create")
+    public String createBoard(@RequestBody CreateBoardDTO createBoardDTO){
         createBoardUseCase.createBoard(createBoardDTO);
         return "SUCCESS";
     }
