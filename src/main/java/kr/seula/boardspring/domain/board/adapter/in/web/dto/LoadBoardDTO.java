@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class LoadBoardDTO {
 
-    private int id;
+    private long id;
 
 }
