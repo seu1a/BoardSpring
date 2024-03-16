@@ -18,9 +18,7 @@ public class CreateBoardService implements CreateBoardUseCase {
 
     @Override
     public void createBoard(CreateBoardDTO boardDTO) {
-        saveBoardPort.saveBoard(
-                Board.createBoard(boardDTO)
-        );
+        saveBoardPort.saveBoard(Board.createBoard(boardDTO));
     }
 
 }
