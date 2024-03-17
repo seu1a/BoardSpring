@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("board")
 @RequiredArgsConstructor
 public class CreateBoardController {
+
     private final CreateBoardUseCase createBoardUseCase;
 
     @PostMapping("create")
@@ -19,4 +20,5 @@ public class CreateBoardController {
         createBoardUseCase.createBoard(createBoardDTO);
         return "SUCCESS";
     }
+
 }
