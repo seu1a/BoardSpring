@@ -24,4 +24,5 @@ public class Board {
                 .description(new BoardDescription(boardDTO.getDescription()))
                 .build();
     }
+
 }
