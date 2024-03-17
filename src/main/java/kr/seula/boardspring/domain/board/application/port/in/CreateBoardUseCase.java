@@ -4,6 +4,6 @@ import kr.seula.boardspring.domain.board.adapter.in.web.dto.CreateBoardDTO;
 
 public interface CreateBoardUseCase {
 
-    void createBoard(CreateBoardDTO createBoardDTO);
+    void createBoard(CreateBoardDTO boardDTO);
 
 }
