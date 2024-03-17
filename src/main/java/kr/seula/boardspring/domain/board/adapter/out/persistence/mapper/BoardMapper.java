@@ -26,4 +26,12 @@ public class BoardMapper {
                 .build();
     }
 
+    public BoardEntity returnBoardEntityWithId(Board board) {
+        return BoardEntity.builder()
+                .id(board.getId().getValue())
+                .title(board.getTitle().getValue())
+                .description(board.getDescription().getValue())
+                .build();
+    }
+
 }
