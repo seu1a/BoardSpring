@@ -3,6 +3,7 @@ package kr.seula.boardspring.domain.board.adapter.out.persistence;
 import kr.seula.boardspring.domain.board.adapter.out.persistence.mapper.BoardMapper;
 import kr.seula.boardspring.domain.board.adapter.out.persistence.repository.BoardRepository;
 import kr.seula.boardspring.domain.board.application.domain.model.Board;
+import kr.seula.boardspring.domain.board.application.port.out.DeleteBoardPort;
 import kr.seula.boardspring.domain.board.application.port.out.EditBoardPort;
 import kr.seula.boardspring.domain.board.application.port.out.LoadBoardPort;
 import kr.seula.boardspring.domain.board.application.port.out.SaveBoardPort;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
-public class BoardPersistenceAdapter implements SaveBoardPort, LoadBoardPort, EditBoardPort {
+public class BoardPersistenceAdapter implements SaveBoardPort, LoadBoardPort, EditBoardPort, DeleteBoardPort {
 
     private final BoardRepository boardRepository;
     private final BoardMapper boardMapper;
@@ -35,5 +36,10 @@ public class BoardPersistenceAdapter implements SaveBoardPort, LoadBoardPort, Ed
         boardRepository.save(
                 boardMapper.returnBoardEntityWithId(board)
         );
+    }
+
+    @Override
+    public void deleteBoard(long id) {
+        boardRepository.deleteById(id);
     }
 }
